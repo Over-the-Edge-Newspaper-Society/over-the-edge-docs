@@ -3,6 +3,7 @@ title: Style Guide
 description: Complete editorial standards for Over the Edge journalism
 sidebar:
   order: 1
+  hidden: true
 ---
 
 # Style Guide

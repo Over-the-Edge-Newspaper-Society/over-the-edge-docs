@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightClientMermaid from '@pasqal-io/starlight-client-mermaid';
+import sidebarConfig from './sidebar.config.mjs';
 
 export default defineConfig({
   site: 'https://over-the-edge-newspaper-society.github.io',
@@ -20,34 +21,7 @@ export default defineConfig({
       editLink: {
         baseUrl: 'https://github.com/Over-the-Edge-Newspaper-Society/ote-documentation/edit/starlight/',
       },
-      sidebar: [
-        {
-          label: 'Getting Started',
-          items: [
-            { label: 'Introduction', link: '/intro/' },
-          ],
-        },
-        {
-          label: 'Submission Process',
-          items: [
-            { label: 'Overview', link: '/submission-process/' },
-            { label: 'Email Drafter', link: '/submission-process/email-drafter/' },
-            { label: 'Forms Receiver', link: '/submission-process/forms-receiver/' },
-            { label: 'Payment Calculator', link: '/submission-process/payment-calculator/' },
-            { label: 'Publication Filing', link: '/submission-process/publication-filing/' },
-          ],
-        },
-        {
-          label: 'Resources',
-          items: [
-            { label: 'Overview', link: '/resources/' },
-            { label: 'Templates', link: '/resources/templates/' },
-            { label: 'Tools', link: '/resources/tools/' },
-            { label: 'Contacts', link: '/resources/contacts/' },
-            { label: 'Diagrams', link: '/resources/diagrams/' },
-          ],
-        },
-      ],
+      sidebar: sidebarConfig,
       customCss: [
         './src/styles/custom.scss',
       ],
